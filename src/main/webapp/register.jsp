@@ -16,23 +16,27 @@
     </jsp:include>
     <main>
         <c:if test="${errors != null}">
-        <div class="alert-danger">
-            <ul>
-                <li>Some error</li>
-            </ul>
-        </div>
+            <div class="alert-danger">
+                <c:forEach var="error" items="${errors}">
+                    <ul>
+                        <li>${error}</li>
+                    </ul>
+                </c:forEach>
+
+            </div>
         </c:if>
-        <form novalidate="novalidate">
+        <form novalidate="novalidate" method="post" action="Controller?command=AddPersonHandler">
             <!-- novalidate in order to be able to run tests correctly -->
             <p><label for="userid">User id</label><input type="text" id="userid" name="userid"
-                                                         required></p>
+                                                         required value="${prevUserid}"></p>
             <p><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName"
-                                                               required value=""></p>
+                                                               required value="${prevFirstName}"></p>
             <p><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName"
-                                                             required></p>
-            <p><label for="email">Email</label><input type="email" id="email" name="email" required></p>
+                                                             required value="${prevLastName}"></p>
+            <p><label for="email">Email</label><input type="email" id="email" name="email" required
+                                                      value="${prevEmail}"></p>
             <p><label for="password">Password</label><input type="password" id="password" name="password"
-                                                            required></p>
+                                                            required value="${prevPassword}"></p>
             <p><input type="submit" id="signUp" value="Sign Up"></p>
 
         </form>
