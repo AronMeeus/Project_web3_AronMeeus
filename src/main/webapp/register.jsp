@@ -22,7 +22,6 @@
                         <li>${error}</li>
                     </ul>
                 </c:forEach>
-
             </div>
         </c:if>
         <form novalidate="novalidate" method="post" action="Controller?command=AddPersonHandler">

@@ -77,7 +77,7 @@ public class AddPersonHandler extends RequestHandler {
     private void setUserid(List<String> errors, Person person, HttpServletRequest request) {
         String userid = request.getParameter("userid");
         try {
-            person.setUserid(userid);
+            person.setUserid(userid.toLowerCase());
             request.setAttribute("prevUserid", userid);
         } catch (Exception e) {
             errors.add(e.getMessage());

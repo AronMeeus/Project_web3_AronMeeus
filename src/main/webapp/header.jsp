@@ -12,7 +12,7 @@
     </h1>
 <nav>
     <ul>
-        <li id="actual"><a href="Controller">Home</a></li>
+        <li id="actual"><a href="Controller?command=IndexHandler">Home</a></li>
         <li><a href="Controller?command=OverviewHandler">Overview</a></li>
         <li><a href="Controller?command=RegisterHandler">Register</a></li>
     </ul>
