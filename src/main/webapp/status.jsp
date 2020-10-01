@@ -38,8 +38,7 @@
             <c:if test="${!user.sick}">
                 <p>je bent momenteel gezond</p>
             </c:if>
-
-            <p>druk op de knop om je status te veranderen</p>
+            
             <a href="Controller?command=ChangeStatusHandler&userid=${user.userid}">Verander status</a>
         </c:if>
     </main>
