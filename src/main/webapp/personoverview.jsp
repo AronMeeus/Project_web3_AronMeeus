@@ -19,12 +19,21 @@
                     <th>E-mail</th>
                     <th>First Name</th>
                     <th>Last Name</th>
+                    <th>Status</th>
                 </tr>
                 <c:forEach var="persoon" items="${personen}">
                     <tr>
                         <td>${persoon.email}</td>
                         <td>${persoon.firstName}</td>
                         <td>${persoon.lastName}</td>
+                        <c:choose>
+                            <c:when test="${persoon.sick}">
+                                <td>sick</td>
+                            </c:when>
+                            <c:otherwise>
+                                <td>healthy</td>
+                            </c:otherwise>
+                        </c:choose>
                     </tr>
                 </c:forEach>
 

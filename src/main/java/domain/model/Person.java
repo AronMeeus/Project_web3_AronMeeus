@@ -9,6 +9,7 @@ public class Person {
 	private String password;
 	private String firstName;
 	private String lastName;
+	private boolean sick;
 
 	public Person(String userid, String email, String password, String firstName, String lastName) {
 		setUserid(userid);
@@ -16,9 +17,17 @@ public class Person {
 		setPassword(password);
 		setFirstName(firstName);
 		setLastName(lastName);
+		this.sick = false;
 	}
 	
 	public Person() {
+	}
+
+	public void changeStatus(){
+		this.sick = !this.sick;
+	}
+	public boolean getSick(){
+		return sick;
 	}
 
 	public String getUserid() {

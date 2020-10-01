@@ -17,6 +17,9 @@ public abstract class RequestHandler {
     public void setService(PersonService service) {
         this.service = service;
     }
+    public void setSession(HttpSession session){
+        this.session = session;
+    }
 
     public PersonService getService() {
         return service;

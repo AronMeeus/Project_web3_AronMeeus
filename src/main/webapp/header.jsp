@@ -15,6 +15,7 @@
         <li id="actual"><a href="Controller?command=IndexHandler">Home</a></li>
         <li><a href="Controller?command=OverviewHandler">Overview</a></li>
         <li><a href="Controller?command=RegisterHandler">Register</a></li>
+        <li><a href="Controller?command=StatusHandler">Status</a></li>
     </ul>
 </nav>
 <h2>${param.page}</h2>
