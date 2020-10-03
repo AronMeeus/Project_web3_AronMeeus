@@ -26,20 +26,20 @@
 
     <main>
         <c:if test="${user == null}">
-            <p>je bent niet ingelogd dus je kan je status niet veranderen</p>
+            <p>You're not logged, login to change status</p>
 
         </c:if>
         <c:if test="${user != null}">
-            <p>welkom ${user.firstName}</p>
+            <p>welcome ${user.firstName}</p>
 
             <c:if test="${user.sick}">
-                <p>je bent momenteel ziek</p>
+                <p>You are sick.</p>
             </c:if>
             <c:if test="${!user.sick}">
-                <p>je bent momenteel gezond</p>
+                <p>You are healthy.</p>
             </c:if>
             
-            <a href="Controller?command=ChangeStatusHandler&userid=${user.userid}">Verander status</a>
+            <a href="Controller?command=ChangeStatusHandler&userid=${user.userid}">Change status</a>
         </c:if>
     </main>
     <footer> &copy; Webontwikkeling 3, UC Leuven-Limburg</footer>
