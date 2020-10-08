@@ -15,32 +15,22 @@
     <jsp:include page="header.jsp">
         <jsp:param name="page" value="status"/>
     </jsp:include>
-    <c:if test="${loginError != null}">
-        <div class="alert-danger">
-            <ul>
-                <li>${loginError}</li>
-            </ul>
-        </div>
-    </c:if>
 
 
     <main>
-        <c:if test="${user == null}">
-            <p>You're not logged, login to change status</p>
 
-        </c:if>
-        <c:if test="${user != null}">
-            <p>welcome ${user.firstName}</p>
 
-            <c:if test="${user.sick}">
-                <p>You are sick.</p>
-            </c:if>
-            <c:if test="${!user.sick}">
-                <p>You are healthy.</p>
-            </c:if>
-            
-            <a href="Controller?command=ChangeStatusHandler&userid=${user.userid}">Change status</a>
+        <p>welcome ${user.firstName}</p>
+
+        <c:if test="${user.sick}">
+            <p>You are sick.</p>
         </c:if>
+        <c:if test="${!user.sick}">
+            <p>You are healthy.</p>
+        </c:if>
+
+        <a href="Controller?command=ChangeStatusHandler&userid=${user.userid}">Change status</a>
+
     </main>
     <footer> &copy; Webontwikkeling 3, UC Leuven-Limburg</footer>
 </div>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Aron
@@ -15,7 +16,9 @@
         <li id="actual"><a href="Controller?command=IndexHandler">Home</a></li>
         <li><a href="Controller?command=OverviewHandler">Overview</a></li>
         <li><a href="Controller?command=RegisterHandler">Register</a></li>
+        <c:if test="${user != null}">
         <li><a href="Controller?command=StatusHandler">Status</a></li>
+        </c:if>
     </ul>
 </nav>
 <h2>${param.page}</h2>
