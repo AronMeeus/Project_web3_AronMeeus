@@ -53,9 +53,4 @@ public class Controller extends HttpServlet {
 
     }
 
-    private String Overview(HttpServletRequest request, HttpServletResponse response) {
-        List<Person> personenLijst = personService.getAll();
-        request.setAttribute("personen", personenLijst);
-        return "personoverview.jsp";
-    }
 }
